@@ -1,0 +1,12 @@
+<div class="container">
+        <div class="classhome">
+                <h2 ng-show="$root.usuarioLogado == null">Seja muito bem vindo</h2>
+                <h4>Logue para ter acesso ao conteúdo</h4>
+                <br />
+                <h2 ng-show="$root.usuarioLogado != null">Seja bem vindo {{$root.usuarioLogado.username}}</h2>
+
+                <div class="">
+                        <span>Adquira já o nosso sistema e ganhe super descontos</span>
+                </div>
+        </div>
+</div>
