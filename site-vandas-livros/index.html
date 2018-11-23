@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS: Single Page com ngView e ngRoute</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.1.3.css">
+  </head>
+  
+</head>
+<body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+          <div class="container"> <a class="navbar-brand" href="#">
+              <i class="fa d-inline fa-lg fa-stop-circle"></i>
+              <b> ASSIMOK INFORMÁTICA</b>
+            </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar16">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar16">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item" ng-class="{active: activetab == '/'}"> <a class="nav-link" href="/home">Home</a> </li>
+                <li class="nav-item" ng-class="{active: activetab == '/clientes'}"> <a class="nav-link" href="/clientes">Clientes</a> </li>
+                <li class="nav-item" ng-class="{active: activetab == '/sistema'}"> <a class="nav-link" href="/sistema">Sistemas</a> </li>
+                <li class="nav-item" ng-class="{active: activetab == '/equipe'}"> <a class="nav-link" href="/equipe">Equipe</a> </li>
+              </ul ng-class="{active: activetab == '/contato'}"> <a class="btn navbar-btn ml-md-2 text-dark btn-light" href="/contato">Contato</a>
+            </div>
+          </div>
+        </nav>  
+        
+       
+    
+    <div ng-view></div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/controllers/controllers.js"></script>
+
+    <!-- Footer -->
+<footer class="text-md-left text-center p-4 bg-dark text-light">
+  <div class="container">
+    <div class="row">
+      <div class="my-3 col-lg-4 col-md-6">
+        <h3>Conference Pingendo</h3>
+        <p class="text-muted">December 12-14, 2017</p>
+        <p class="my-3">
+          <a href="https://goo.gl/maps/ayn28vkB5F92" target="blank" class="text-muted">Empire State building 350 5th Ave, <br>New York, NY 10118</a>
+        </p>
+        <a class="btn btn-lg btn-primary" href="#">Register now</a>
+      </div>
+      <div class="my-3 col-lg-4 col-md-6">
+        <h3>Contact us</h3>
+        <form>
+          <fieldset class="form-group my-3">
+            <input type="email" class="form-control" id="Input Email" placeholder="Email"> </fieldset>
+          <fieldset class="form-group my-3">
+            <input type="message" class="form-control" id="Input Message" placeholder="Message"> </fieldset>
+          <button type="submit" class="btn btn-outline-primary">Submit</button>
+        </form>
+      </div>
+      <div class="col-lg-1"> </div>
+      <div class="my-3 col-lg-3">
+        <h3>Follow</h3>
+        <a href="https://www.facebook.com" target="blank"><i class="fa fa-facebook-square text-muted fa-3x m-2"></i></a>
+        <a href="https://www.instagram.com" target="blank"><i class="fa fa-3x fa-instagram text-muted m-2"></i></a>
+        <a href="https://twitter.com" target="blank"><i class="fa fa-3x fa-twitter m-2 text-muted"></i></a>
+        <a href="https://plus.google.com" target="blank"><i class="fa fa-3x fa-google-plus-official text-muted m-2"></i></a>
+        <a href="https://pinterest.com" target="blank"><i class="fa fa-3x text-muted fa-pinterest-p m-2"></i></a>
+        <a href="https://www.youtube.com" target="blank"><i class="fa fa-3x text-muted fa-youtube-play m-2"></i></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-muted">© Copyright 2018 Pingendo - All rights reserved. </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
